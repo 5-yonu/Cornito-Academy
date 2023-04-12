@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.icons a {
+    margin-top: 1.5em;
+    display: inline-flex;
+    justify-content: space-evenly;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1px;
+    transition: ease-in-out 0.4s;
+}
+
+.icons a:hover {
+    color: #f5f5f7;
+    background-color: none;
+    transform: scale(1.1);
+}
+
+.sidebar-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #133a1b;
+    color: #f5f5f7;
+    padding: 12px 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background-color: #133a1b;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    z-index: 1;
+    box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+}
+
+.nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    letter-spacing: 1px;
+    transition: ease-in-out 0.4s;
+}
+
+.nav a:hover {
+    background-color: #f5f5f7;
+    color: #133a1b;
+    transform: scale(1.1);
+}
+
+.sidebar-show {
+    right: 0;
+}
+
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.searchbar {
+    margin-top: 1.5em;
+    display: inline-flex;
+    padding: 0px 10%;
+}
+
+
+.search-input {
+    border: none;
+    max-width: 25em;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid white;
+    background-color: #00000000;
+    color: white;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.searchbar a {
+    padding-top: 5%;
+    text-decoration: none ;
+    color: white;
+}
+
+.overlay {
+    position: relative;
+    top: -30.5%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(19,58,27,.6));
+}
+
+.container-1 {
+    height: 45rem;
+    width: 100%;
+    background-image: url('bs-bio.jpg');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-2 {
+    height: 45rem;
+    width: 100%;
+    background-image: url('bs-marbio.jpg');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-3 {
+    height: 45rem;
+    width: 100%;
+    background-image: url('bs-chemm.jpg');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-4 {
+    height: 45rem;
+    width: 100%;
+    background-image: url('bs-ap.jpg');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-5 {
+    height: 45rem;
+    width: 100%;
+    background-image: url('bs-p.jpg');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -15em;
+}
+
+.container-6 {
+    height: 45rem;
+    width: 100%;
+    background-image: url('bs-astro.jpg');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -15em;
+}
+
+.container-7 {
+    height: 45rem;
+    width: 100%;
+    background-image: url('bs-geo.jpg');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-8 {
+    height: 45rem;
+    width: 100%;
+    background-image: url('bs-cs.jpg');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -15em;
+}
+
+.container-9 {
+    height: 45rem;
+    width: 100%;
+    background-image: url('bs-it.jpg');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.course {
+    margin-left: 2em;
+    display: block;
+    position: relative;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.course p {
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 2em;
+    color: white;
+}
+
+.course h1 {
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 3em;
+    width: 70%;
+    color: white;
+    margin-bottom: 3%;
+}
+
+.course a {
+    text-decoration: none;
+    font-family: Bebas Neue, sans-serif;
+    color: white;
+    border: 2px solid white;
+    padding: 5px 25px;
+    font-size: 20px;
+    margin-left: 2px;
+    transition: 0.3s ease-in-out;
+}
+
+.course a:hover {
+    background-color: white;
+    color: black;
+}
+
+/*
+@media screen and (max-width: 1920px) {
+    .icons a {
+        margin-top: 1.5em;
+        display: inline-flex;
+        justify-content: space-evenly;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        letter-spacing: 1px;
+        transition: ease-in-out 0.4s;
+    }
+    
+    .icons a:hover {
+        color: #f5f5f7;
+        background-color: none;
+        transform: scale(1.1);
+    }
+    
+    .sidebar-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #133a1b;
+        color: #f5f5f7;
+        padding: 12px 16px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        z-index: 1;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    
+    .sidebar {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        background-color: #133a1b;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+        z-index: 1;
+        box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+    }
+    
+    .nav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        display: block;
+        letter-spacing: 1px;
+        transition: ease-in-out 0.4s;
+    }
+    
+    .nav a:hover {
+        background-color: #f5f5f7;
+        color: #133a1b;
+        transform: scale(1.1);
+    }
+    
+    .sidebar-show {
+        right: 0;
+    }
+    
+    .close-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+    
+    .searchbar {
+        margin-top: 1.5em;
+        display: inline-flex;
+        padding: 0px 10%;
+    }
+    
+    
+    .search-input {
+        border: none;
+        max-width: 25em;
+        padding: 10px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid white;
+        background-color: #00000000;
+        color: white;
+    }
+    
+    .search-input:focus {
+        outline: none;
+    }
+    
+    .searchbar a {
+        padding-top: 5%;
+        text-decoration: none ;
+        color: white;
+    }
+    .container-2 {
+        height: 45rem;
+        width: 100%;
+        background-image: url('bs-marbio.jpg');
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 30%;
+    }
+    .container-3 {
+        height: 45rem;
+        width: 100%;
+        background-image: url('bs-chemm.jpg');
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 55%;
+    }
+
+    .container-5 {
+        height: 45rem;
+        width: 100%;
+        background-image: url('bs-p.jpg');
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: -3em;
+    }
+
+    .container-6 {
+        height: 45rem;
+        width: 100%;
+        background-image: url('bs-astro.jpg');
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: 0;
+    }    
+
+    .container-8 {
+        height: 45rem;
+        width: 100%;
+        background-image: url('bs-cs.jpg');
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: 115%;
+        
+    }
+
+    .container-9 {
+        height: 45rem;
+        width: 100%;
+        background-image: url('bs-it.jpg');
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    
+    .overlay {
+        position: relative;
+        top: -24.8%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(19,58,27,.6));
+    }
+  }

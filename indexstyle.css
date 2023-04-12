@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.icons a {
+    margin-top: 1.5em;
+    display: inline-flex;
+    justify-content: space-evenly;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1px;
+    transition: ease-in-out 0.4s;
+}
+
+.icons a:hover {
+    color: #f5f5f7;
+    background-color: none;
+    transform: scale(1.1);
+}
+
+.sidebar-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #133a1b;
+    color: #f5f5f7;
+    padding: 12px 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background-color: #133a1b;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    z-index: 1;
+    box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+}
+
+.nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    letter-spacing: 1px;
+    transition: ease-in-out 0.4s;
+}
+
+.nav a:hover {
+    background-color: #f5f5f7;
+    color: #133a1b;
+    transform: scale(1.1);
+}
+
+.sidebar-show {
+    right: 0;
+}
+
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #f5f5f7;
+}
+
+.searchbar {
+    margin-top: 1.5em;
+    display: inline-flex;
+    padding: 0px 10%;
+}
+
+
+.search-input {
+    border: none;
+    max-width: 25em;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid white;
+    background-color: #00000000;
+    color: white;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.searchbar a {
+    padding-top: 5%;
+    text-decoration: none ;
+    color: white;
+}
+
+.cover {
+    height: 500px;
+}
+
+#myVideo {
+    position: fixed;
+    top: 28%;
+    left: 50%;
+    width: 100%;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    filter: brightness(0.8);
+}
+
+.logo img {
+    overflow: hidden;
+    display: inline-flex;
+    width: 25%;
+    position: absolute;
+    left: 37.5%;
+    top: 13%;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+    
+.navbar {
+    position: relative;    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #b7bf96;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    justify-content: space-evenly;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+}
+
+li a:hover {
+    background-color: #133a1b;
+    color: white;
+    transform: scale(1.1);
+}
+
+.dropbtn, .dropbtn2, .dropbtn3 {
+    background-color: #b7bf96;
+    outline: none;
+    border: none;
+    color: black;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+    font-size: 16px;
+}
+
+.dropmenu, .dropmenu2, .dropmenu3 {
+    display: none;
+    position: relative;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropmenu3 a {
+    color: black;
+    text-decoration: underline black;
+}
+
+.dropmenu a, .dropmenu2 a, .dropmenu3 p{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+.dropmenu a:hover, .dropmenu2 a:hover {
+    color: #133a1b;
+    font-weight: bold;
+    transform: scale(1.06);
+}
+
+.dropbtn:hover, .dropbtn2:hover, .dropbtn3:hover {
+    background-color: #133a1b;
+    color: white;
+    transform: scale(1.1);
+}
+
+.dropbtn:focus, .dropbtn2:focus, .dropbtn3:focus {
+    background-color: #133a1b;
+    color: white;
+} 
+
+.show {
+    display: block;
+}
+
+.show2 {
+    display: block;
+}
+
+.show3 {
+    display: block;
+}
+
+.dropmenu {
+    position: absolute;
+    left: 23%;
+}
+
+.dropmenu2 {
+    position: absolute;
+    left: 43%;
+}
+
+.dropmenu3 {
+    width: 28%;
+    position: absolute;
+    left: 67%;
+    justify-content: space-evenly;
+}
+
+.cont-info {
+    display: flex;
+}
+
+.cont-info p {
+    width: 100%;
+    text-align: left;
+}
+
+.cont-info:nth-of-type(1) i {
+    padding-top: 4%;
+    padding-left: 2%;
+}
+
+.cont-info:nth-of-type(2) i {
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.cont-info:nth-of-type(3) i {
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+main {
+    max-height: auto;
+    background-image: url('bg3.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container-1 {
+    padding: 80px 120px;
+    margin: auto;
+    color: black;
+    background-color: #00000000;
+}
+
+.container-1 h1 {
+    font-family: Playfair Display, serif;
+    size: 50px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #1d1d1f;
+    text-align: center;
+}
+
+.container-1 p {
+    margin-top: 10px;
+    word-spacing: 2px;
+    line-height: 25px;
+    text-align: justify;
+    font-weight: 500;
+    color: #1d1d1f;
+}
+
+.line {
+    max-height: 2px;
+    width: 80%;
+    background-color: #133a1b;
+    margin: 8px 0px;
+    color: #00000000;
+    position: relative;
+    left: 10%;
+}
+
+.text-span {
+    color: #133a1b;
+    font-weight: bold;
+}
+
+.container-2 {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding-bottom: 80px;
+    background-color: #00000000;
+}
+
+.image-box {
+    border: 3px #133a1b solid;
+    height: 350px;
+    width: 25%;
+}
+
+.image-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.divider {
+    display: flex;
+    width: 7%;
+    position: relative;
+    top: 140%;
+    left: 46%;
+    transform-origin: top left;
+}
+
+.divider img {
+
+}
+
+.container-3 {
+    padding: 80px 120px;
+    margin: auto;
+    color: black;
+    background-color: #b7bf96;
+    border-top: solid 2px #133a1b;
+    border-bottom: solid 2px #133a1b;
+}
+
+.line1 {
+    max-height: 2px;
+    width: 80%;
+    background-color: #133a1b;
+    margin: 8px 0px;
+    color: #00000000;
+    position: relative;
+    left: 10%;
+}
+
+.container-3 h1 {
+    font-family: Playfair Display, serif;
+    size: 50px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.container-3 p {
+    margin-top: 10px;
+    word-spacing: 2px;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.c3-info {
+    margin-top: 50px;
+}
+
+.container-4 {
+    background-image: url('bg2.png');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 40px 50px;
+}
+
+.container-4 h1 {
+    font-family: Playfair Display, serif;
+    size: 50px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #f5f5f7;
+}
+
+.container-4 p {
+    text-align: center;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    color: #e4deae;
+}
+
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+
+}
+
+.article {
+    height: 250px;
+    width: 32%;
+    transition: ease-in-out .3s all;
+    overflow: auto;
+}
+
+.headline {
+    background-color: #133a1b99;
+    width: 100%;
+    height: 30%;
+    position: relative;
+    top: 70%;
+    padding-top: 2%;
+}
+
+.headline h1 {
+    padding-top: 0.5em;
+    width: 100%;
+    font-size: 120%;
+    color: #f5f5f7;
+    letter-spacing: 1px;
+    font-family: Bebas Neue, serif;
+}
+
+.article:nth-of-type(1) {
+    background-image: url('news1.jpg');
+    background-size: cover;
+}
+
+.article:nth-of-type(2) {
+    background-image: url('facade1.jpeg');
+    background-size: cover;
+}
+
+.article:nth-of-type(3) {
+    background-image: url('news2.jpg');
+    background-size: cover;
+}
+
+.article:nth-of-type(4) {
+    background-image: url('news3.jpg');
+    background-size: cover;
+}
+
+.article:nth-of-type(5) {
+    background-image: url('news4.jpg');
+    background-size: cover;
+}
+
+.article:nth-of-type(6) {
+    background-image: url('news5.jpg');
+    background-size: cover;
+}
+
+.article:nth-of-type(7) {
+    background-image: url('news6.jpg');
+    background-size: cover;
+}
+
+.article:nth-of-type(8) {
+    background-image: url('news7.jpg');
+    background-size: cover;
+}
+
+.article:nth-of-type(9) {
+    background-image: url('schoolimg1.jpg');
+    background-size: cover;
+}
+
+.article:hover {
+    transform: scale(1.03);
+}
+
+.container-5 {
+    max-height: 500rem;
+    width: 100%;
+    background-image: url('statue.png');
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -150px;
+}
+
+.container-5 h1 {
+    position: relative;
+    font-weight: 300;
+    color: #e4deae;
+    text-align: center;
+    padding: 14% 0px;
+    letter-spacing: 10px;
+    word-spacing: 2px;
+}
+
+.navfooter {
+    background-color: #133a1b;
+    color: #f5f5f7;
+    max-height: 50vh;
+    min-width: 100vh;
+    display: flex;
+    padding: 2em 4em;
+    position: absolute;
+}
+
+.vision {
+    max-width: 22%;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.vision h1 {
+    font-family: Bebas Neue, sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 0.5em;
+}
+
+.vision p {
+    font-weight: light;
+    font-size: 15px;
+}
+
+.links {
+    width: 22%;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+.links h1 {
+    font-family: Bebas Neue, sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 0.5em;
+}
+
+.links a {
+    font-weight: light;
+    font-size: 15px;
+    color: #f5f5f7;
+    text-decoration: underline #e4deae;
+}
+
+.links p {
+    margin-bottom: 0.5em;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 2.5em;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.foot-img {
+    position: relative;
+}
+
+.foot-img img {
+    max-width: 22%;
+    position: relative;
+    left: 35%;
+    top: 12%;
+}
+
+/*
+@media screen and (max-width: 1920px) {
+    .logo img {
+        overflow: hidden;
+        display: inline-flex;
+        width: 15%;
+        position: absolute;
+        left: 42.5%;
+        top: 10%;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+}
